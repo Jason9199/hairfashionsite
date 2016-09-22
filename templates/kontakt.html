@@ -1,0 +1,67 @@
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-1 contactArea">
+		<h2>Lucia's Hairfashion</h2>
+		<p>Inhaberin: Lucia Felice</p>
+		<p></p>
+		<p>Lemaitrestraße 4-6</p>
+		<p>68309 Mannheim</p>
+		<p></p>
+		<p>Telefon: 0621/ 718 58 68</p>
+		<p></p>
+	</div>
+	<div class="col-sm-7 contactArea" >
+	<h2>Wegbeschreibung</h2>
+		<form name="frm" novalidate>
+			<div class="row">
+			
+				<div class="col-sm-4">
+					<p>Strasse:</p>
+				</div>
+				<div class="col-sm-8">
+					<input name="street" type="text" class="weg item ng-class:isError" ng-model="strasse">
+				</div>
+				<div ng-show="isStreet" class="col-sm-8 errorMsg">Bitte geben Sie Ihren Strassennamen ein!
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>PLZ:</p>
+				</div>
+				<div class="col-sm-8">
+					<input type="text" class="weg" ng-model="plz">
+				</div>	
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Stadt:</p>
+				</div>
+				<div class="col-sm-8">
+					<input type="text" class="weg item ng-class:isError" ng-model="stadt" required>
+				</div>
+				<div ng-show="isCity" class="col-sm-8 errorMsg">Bitte geben Sie Ihre Stadt ein!
+				</div>
+			</div>
+			<div class="row">		
+				<div class="col-sm-10 col-sm-offset-2">
+					<button ng-click="showWay()" class="wegbeschreibung">Wegbeschreibung finden</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
+<div class="row">
+<div class="col-sm-12">
+<map id="myMap" center="[49.515141, 8.515128]" zoom="16">
+	<marker
+      position="[49.515141, 8.515128]"
+      title="Lucia's Hair Fashion"
+      animation="Animation.DROP"
+      draggable="false"
+      visible="true"
+      ></marker>
+
+</map>
+
+</div>
+</div>

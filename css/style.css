@@ -1,0 +1,428 @@
+@font-face { font-family: neuropol; src: url(NEUROPOL.ttf); } 
+.item .bright{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+/* Webkit-Browser */
+@-webkit-keyframes imageHover {
+  0%   {-webkit-transform: scale(1.0) translateY(0px);}
+  35%  {-webkit-transform: scale(1.3) translateY(0px); }
+  100% {-webkit-transform: scale(1.3) translateY(20px); }
+}
+@-webkit-keyframes imageHoverBright {
+  0%   {-webkit-transform: scale(1.0) translateY(0px); opacity:0;}
+  35%  {-webkit-transform: scale(1.3) translateY(0px); opacity:0;}
+  100% {-webkit-transform: scale(1.3) translateY(20px); opacity:1;}
+}
+@-webkit-keyframes imageOut {
+  0%   {-webkit-transform: scale(1.3) translateY(20px); }
+  65%  {-webkit-transform: scale(1.3) translateY(0px); }
+  100% {-webkit-transform: scale(1.0) translateY(0px); }
+}
+@-webkit-keyframes imageOutBright {
+  0%   {-webkit-transform: scale(1.3) translateY(20px); opacity:1;}
+  65%  {-webkit-transform: scale(1.3) translateY(0px); opacity:0;}
+  100% {-webkit-transform: scale(1.0) translateY(0px); opacity:0;}
+}
+@-webkit-keyframes buttonHover{
+  0%  {height: 78px; line-height:78px;}
+  10% {height: 70px; line-height: 150px;}
+  20% {              line-height:20px;}
+  25% {              line-height:180px;}
+  35% {height: 150px; line-height:130px;}
+  100%{height: 142px; line-height:142px;}
+}
+@-webkit-keyframes buttonOut{
+  0%  {height: 142px; line-height:142px;}
+  10% {height: 150xp; line-height:130px;}
+  20% {               line-height:180px;}
+  35% {height: 70px; line-height:150px;}
+  36% {height 70px; line-height: 30px;}
+  100%{height: 78px; line-height:78px;}
+}
+
+/* Mozilla */
+@-moz-keyframes imageHover {
+  0%   {-moz-transform: scale(1.0) translateY(0px); }
+  35%  {-moz-transform: scale(1.3) translateY(0px);}
+  100% {-moz-transform: scale(1.3) translateY(20px);}
+}
+@-moz-keyframes imageHoverBright {
+  0%   {-moz-transform: scale(1.0) translateY(0px); opacity:0; }
+  35%  {-moz-transform: scale(1.3) translateY(0px); opacity:0; }
+  100% {-moz-transform: scale(1.3) translateY(20px); opacity:1;}
+}
+@-moz-keyframes imageOut {
+  0%   {-moz-transform: scale(1.3) translateY(20px);}
+  65%  {-moz-transform: scale(1.3) translateY(0px); }
+  100% {-moz-transform: scale(1.0) translateY(0px); }
+}
+@-moz-keyframes imageOutBright {
+  0%   {-moz-transform: scale(1.3) translateY(20px); opacity:1;}
+  65%  {-moz-transform: scale(1.3) translateY(0px); opacity:0; }
+  100% {-moz-transform: scale(1.0) translateY(0px); opacity:0; }
+}
+@-moz-keyframes buttonHover{
+  0%  {height: 78px; line-height:78px;}
+  10% {height: 70px; line-height: 150px;}
+  20% {              line-height:20px;}
+  25% {              line-height:180px;}
+  35% {height: 150px; line-height:130px;}
+  100%{height: 142px; line-height:142px;}
+}
+@-moz-keyframes buttonOut{
+  0%  {height: 142px; line-height:142px;}
+  10% {height: 150xp; line-height:130px;}
+  20% {               line-height:180px;}
+  35% {height: 70px; line-height:150px;}
+  36% {height 70px; line-height: 30px;}
+  100%{height: 78px; line-height:78px;}
+}
+
+/* Standard */
+@keyframes imageHover {
+  0%   {transform: scale(1.0) translateY(0px); }
+  35%  {transform: scale(1.3) translateY(0px); }
+  100% {transform: scale(1.3) translateY(20px);}
+}
+@keyframes imageHoverBright {
+  0%   {transform: scale(1.0) translateY(0px); opacity:0; }
+  35%  {transform: scale(1.3) translateY(0px); opacity:0; }
+  100% {transform: scale(1.3) translateY(20px); opacity:1; }
+}
+@keyframes imageOut {
+  0%   {transform: scale(1.3) translateY(20px); }
+  65%  {transform: scale(1.3) translateY(0px); }
+  100% {transform: scale(1.0) translateY(0px); }
+}
+@keyframes imageOutBright {
+  0%   {transform: scale(1.3) translateY(20px); opacity:1; }
+  65%  {transform: scale(1.3) translateY(0px); opacity:0; }
+  100% {transform: scale(1.0) translateY(0px); opacity:0; }
+}
+@keyframes buttonHover{
+  0%  {height: 78px; line-height:78px;}
+  10% {height: 70px; line-height: 150px;}
+  20% {              line-height:20px;}
+  25% {              line-height:180px;}
+  35% {height: 150px; line-height:130px;}
+  100%{height: 142px; line-height:142px;}
+}
+@keyframes buttonOut{
+  0%  {height: 142px; line-height:142px;}
+  10% {height: 150xp; line-height:130px;}
+  20% {               line-height:180px;}
+  35% {height: 70px; line-height:150px;}
+  36% {height 70px; line-height: 30px;}
+  100%{height: 78px; line-height:78px;}
+}
+html,body{
+  background:#000 !important;
+}
+.navSmall{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  color:#000;
+  font-size: 1.3em;
+  font-style: bold;
+}
+#header{
+  width:964px;
+  margin: 0 auto;
+  position:relative;
+}
+#header h1{
+  font-family:neuropol;
+  color:white;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  font-size:70px;
+  margin: 0;
+  font-weight:100;
+}
+#header .info{
+  color:white;
+  position:absolute;
+  right:10px;
+  top: 5px;
+  text-align:right;
+  font-size:20px;
+}
+#menu{
+  width:964px;
+  margin: 0 auto;
+}
+#menu .item{
+  float:left;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+}
+#menu .item .button{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  font-family:sans-serif;
+  color:white;
+  font-size:30px;
+  text-align:center;
+  height:78px;
+  line-height:78px;
+  -webkit-animation: buttonOut 0.7s;
+  -moz-animation: buttonOut 0.7s;
+  animation: buttonOut 0.7s; 
+}
+#menu .item:hover .button{
+  -webkit-animation: buttonHover 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;  
+  -moz-animation: buttonHover 0.7s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;  
+  animation: buttonHover 0.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+#menu .item .button.start{
+  background-color:#ff9100;
+  border-top: 1px solid #ffb048;    
+  text-shadow:1px 1px #d97b00; 
+}
+#menu .item .button.leistungen{
+  background-color:#799954;
+  border-top: 1px solid #9fb684;
+  text-shadow: 1px 1px #668247;
+}
+#menu .item .button.preise{
+  background-color:#5e8a74;
+  border-top: 1px solid #8bab9b;
+  text-shadow: 1px 1px #4f7562;
+}
+#menu .item .button.kontakt{
+  background-color:#639598;
+  border-top: 1px solid #8fb3b5;
+  text-shadow: 1px 1px #5b898c;
+}
+#menu .item .button.impressum{
+  background-color:#75b8ff;
+  border-top: 1px solid #9cccff;
+  text-shadow: 1px 1px #67a3e2;
+}
+#menu .item img{ 
+  -webkit-animation: imageOut 0.7s;
+  -moz-animation: imageOut 0.7s;
+  animation: imageOut 0.7s; 
+  padding-bottom:78px;
+}
+#menu .item img.bright{
+  -webkit-animation: imageOutBright 0.7s;
+  -moz-animation: imageOutBright 0.7s;
+  animation: imageOutBright 0.7s;
+}
+#menu .item:hover img{
+  -webkit-animation: imageHover 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;  
+  -moz-animation: imageHover 0.7s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;  
+  animation: imageHover 0.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+#menu .item:hover img.bright{
+  -webkit-animation: imageHoverBright 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;  
+  -moz-animation: imageHoverBright 0.7s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;  
+  animation: imageHoverBright 0.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+/* Stop animations for active item */
+#menu .item.active img, #menu .item.active:hover img{
+  -webkit-transform: scale(1.3) translateY(20px);
+  -webkit-animation:none;  
+  -moz-transform: scale(1.3) translateY(20px);
+  -moz-animation:none;  
+  transform: scale(1.3) translateY(20px);
+  animation:none;
+}
+#menu .item.active img.bright, #menu .item.active:hover img.bright{
+  -webkit-opacity:1;
+  -moz-opacity:1;
+  opacity:1;
+}
+#menu .item.active .button, #menu .item.active:hover .button{
+  height: 142px; 
+  line-height:142px;
+  -webkit-animation:none;
+  -moz-animation:none;
+  animation:none;
+}
+.contentArea{
+  padding-top: 5px;
+  color:white;
+  font-size: 1.5em;
+  width: 100%;
+}
+.contactArea{
+  padding-top: 20px;    
+
+  color:white;
+  font-size: 1.5em;
+}
+.priceArea {
+  width: 964px;
+  padding-top: 5px;
+  color:white;
+  font-size: 1.25em;
+}
+.fineprint{
+  font-size: 0.7em;
+  font-style: italic;
+  color: white;
+}
+.weg{
+  color: black;
+  padding-left: 10px;
+}
+.wegbeschreibung{
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.wegbeschreibung:hover{
+  background: #67a3e2;
+  color: #fff;
+}
+.myError{
+  color:red;
+  border:1px solid red;
+}
+.errorMsg{
+  font-size: 0.75em;
+  color: red;
+}
+#myMap{
+  width: 100%;
+  height: 400px;
+  padding-top: 20px;
+  padding-bottom: 20px; 
+}
+h2{
+  font-size: 2em;
+  color:white;
+  font-weight: bold;
+}
+#bgImg{
+  z-index: 100;
+}
+#view {
+  position: relative;
+  margin: 0 auto;
+  width: 84.5%;
+}
+.ma1,
+.ma2,
+.ma3,
+.ma4 {
+  position: absolute;
+  z-index: 200;
+}
+.home_n {
+  left: 4%;
+}
+.team_n {
+  left: 25%;
+}
+.preise_n {
+  left: 49%;
+}
+.kontakt_n {
+  left: 68%;
+}
+.ma1 {
+  left: 11%;
+  bottom: 0%;
+}
+.ma2 {
+  left: 33%;
+  bottom: 0%;
+}
+.ma3 {
+  left: 59%;
+  bottom: 0%;
+}
+.ma4 {
+  left: 76%;
+  bottom: 0%;
+}
+.girls {
+  width: 120px;
+  height: 240px;
+}
+.name {
+  position: absolute;
+  margin-top: 155px;
+  margin-left: -75px;
+  height: 25px;
+  width: 70px;
+  font-family: sans-serif;
+  font-size: large;
+  background: black;
+  color: lightblue;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 120px;
+  height: 250px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}

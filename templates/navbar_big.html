@@ -1,0 +1,50 @@
+<div class="row">
+<div id="header" >
+      <img src="logo.png" alt="logo" />
+      <h1>Lucia's Hair Fashion</h1>
+      <div class="info">
+        Lemaitrestr. 4-6<br />
+        68309 Mannheim<br />
+        Tel: 0621 / 7 18 58 68
+      </div>
+</div>
+</div>
+<div class="row">
+<div id="menu" ng-controller="navCtrl">
+      <div class="item" ng-click="assignClass(0)" ng-class="{'active':isSelected[0]}">
+        <img src="i1.png" />
+        <img src="bright/i1.png" class="bright"/>
+        <div class="button start">
+          <span>Start</span>              
+        </div>
+      </div>
+      <div class="item" ng-click="assignClass(1)" ng-class="{'active':isSelected[1]}">
+        <img src="i2.png" />
+        <img src="bright/i2.png" class="bright" />
+        <div class="button leistungen">
+          <span>Team</span>              
+        </div>
+      </div>
+      <div class="item" ng-click="assignClass(2)" ng-class="{'active':isSelected[2]}">
+        <img src="i3.png" />
+        <img src="bright/i3.png" class="bright" />
+        <div class="button preise">
+          <span>Preise</span>              
+        </div>
+      </div>
+      <div class="item" ng-click="assignClass(3)" ng-class="{'active':isSelected[3]}">
+        <img src="i4.png" />
+        <img src="bright/i4.png" class="bright" />
+        <div class="button kontakt">
+          <span>Bilder</span>              
+        </div>
+      </div>
+      <div class="item" ng-click="assignClass(4)" ng-class="{'active':isSelected[4]}">
+        <img src="i5.png" />
+        <img src="bright/i5.png" class="bright" />
+        <div class="button impressum">
+          <span>Kontakt</span>              
+        </div>
+      </div>
+</div>
+</div>
